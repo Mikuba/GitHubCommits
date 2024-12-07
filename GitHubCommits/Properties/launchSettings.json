@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GitHubCommits": {
+      "commandName": "Project",
+      "commandLineArgs": "Mikuba FlightBooking\r\n"
+    }
+  }
+}
