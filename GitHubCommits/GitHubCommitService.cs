@@ -112,7 +112,7 @@ namespace GitHubCommits
             {
                 if (hre.StatusCode.Value == System.Net.HttpStatusCode.Conflict)
                 {
-                    _logger.LogWarning("The repository {repositoryNqme} for user {userName} has no commits");               
+                    _logger.LogWarning($"The repository {repositoryName} for user {userName} has no commits");               
                 }
                 if (hre.StatusCode.Value == System.Net.HttpStatusCode.NotFound)
                 {
