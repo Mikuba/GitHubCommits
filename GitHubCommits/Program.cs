@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 
 builder.Logging.ClearProviders();
-builder.Logging.AddConsole();
+builder.Logging.AddConsole(o=>o.Format = Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat.Systemd);
 builder.Services.AddHttpClient()
 .AddDbContext<GitHubCommitsContext>(options => options.UseSqlite($"Data Source={SetDbPath()}"))
 .AddTransient<GitHubCommitService>();
@@ -17,7 +17,6 @@ builder.Services.AddHttpClient()
 var config = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
     .AddEnvironmentVariables()
-    .AddCommandLine(args)
     .Build();
 
 using IHost host = builder.Build();
@@ -31,8 +30,13 @@ if (args.Length != 2 || (args.Length == 2 &&(String.IsNullOrEmpty(args[0]) || St
 }
 else
 {
-     await gitService.ExecuteAsync(args[0], args[1]); 
+     await gitService.ExecuteAsync(args[0], args[1]);
+    Console.WriteLine("========================================================");
+    Console.WriteLine($"The commits for repositorium {args[1]} for use {args[0]} have been uploaded to SQLite data base located at {SetDbPath()}");
+    Console.WriteLine("========================================================");
+    Console.ReadKey();
 }
+
 
 string SetDbPath()
 {

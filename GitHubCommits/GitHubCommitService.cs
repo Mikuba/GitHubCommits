@@ -19,7 +19,7 @@ namespace GitHubCommits
             _context = context;
         }
 
-        public async Task<GitHubCommit> ExecuteAsync(string userName, string repositoryName)
+        public async Task ExecuteAsync(string userName, string repositoryName)
         {
             var commits =  await RetrieveCommits(userName, repositoryName);
 
@@ -29,23 +29,21 @@ namespace GitHubCommits
             {
                 await DbSave(userName, repositoryName, commits);
             }
-            return null;
-
         }
 
         private void PrintCommits(GitHubCommit.Root[]? commits, string userName, string repositoryName)
         {
-            _logger.LogInformation("Following commits have been retrieved :");
-            _logger.LogInformation("========================================");
+            _logger.LogWarning("===================================================");
+            _logger.LogWarning("|Following commits have been retrieved :           |");
+            _logger.LogWarning("===================================================");
             foreach(var commit in commits)
             {
                 string committer, message;
                 HandleNullValues(commit, out committer, out message);
-                _logger.LogInformation($@"[{repositoryName}]/[{commit.sha}]: {message} [{committer}]");
+                _logger.LogWarning($@"[{repositoryName}]/[{commit.sha}]: {message} [{committer}]");
 
             }
             _logger.LogInformation("Those will be saved in database, unless they already exist");
-            _logger.LogInformation("Press any key:");
         }
 
         private async Task DbSave(string userName, string RepositoryName, GitHubCommit.Root[]? commits)

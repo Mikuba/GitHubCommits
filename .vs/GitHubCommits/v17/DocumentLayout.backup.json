@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mikub\\source\\repos\\GitHubCommits\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{38763C6F-504C-4567-AD50-617A7BC898BF}|GitHubCommits\\GitHubCommits.csproj|c:\\users\\mikub\\source\\repos\\githubcommits\\githubcommits\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38763C6F-504C-4567-AD50-617A7BC898BF}|GitHubCommits\\GitHubCommits.csproj|solutionrelative:githubcommits\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38763C6F-504C-4567-AD50-617A7BC898BF}|GitHubCommits\\GitHubCommits.csproj|c:\\users\\mikub\\source\\repos\\githubcommits\\githubcommits\\githubcommitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38763C6F-504C-4567-AD50-617A7BC898BF}|GitHubCommits\\GitHubCommits.csproj|solutionrelative:githubcommits\\githubcommitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38763C6F-504C-4567-AD50-617A7BC898BF}|GitHubCommits\\GitHubCommits.csproj|c:\\users\\mikub\\source\\repos\\githubcommits\\githubcommits\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{38763C6F-504C-4567-AD50-617A7BC898BF}|GitHubCommits\\GitHubCommits.csproj|solutionrelative:githubcommits\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38763C6F-504C-4567-AD50-617A7BC898BF}|GitHubCommits\\GitHubCommits.csproj|c:\\users\\mikub\\source\\repos\\githubcommits\\githubcommits\\githubcommits.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{38763C6F-504C-4567-AD50-617A7BC898BF}|GitHubCommits\\GitHubCommits.csproj|solutionrelative:githubcommits\\githubcommits.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38763C6F-504C-4567-AD50-617A7BC898BF}|GitHubCommits\\GitHubCommits.csproj|c:\\users\\mikub\\source\\repos\\githubcommits\\githubcommits\\githubcommitcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38763C6F-504C-4567-AD50-617A7BC898BF}|GitHubCommits\\GitHubCommits.csproj|solutionrelative:githubcommits\\githubcommitcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\mikub\\source\\repos\\GitHubCommits\\GitHubCommits\\appsettings.json",
+              "RelativeDocumentMoniker": "GitHubCommits\\appsettings.json",
+              "ToolTip": "C:\\Users\\mikub\\source\\repos\\GitHubCommits\\GitHubCommits\\appsettings.json",
+              "RelativeToolTip": "GitHubCommits\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-08T13:27:25.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GitHubCommitService.cs",
+              "DocumentMoniker": "C:\\Users\\mikub\\source\\repos\\GitHubCommits\\GitHubCommits\\GitHubCommitService.cs",
+              "RelativeDocumentMoniker": "GitHubCommits\\GitHubCommitService.cs",
+              "ToolTip": "C:\\Users\\mikub\\source\\repos\\GitHubCommits\\GitHubCommits\\GitHubCommitService.cs",
+              "RelativeToolTip": "GitHubCommits\\GitHubCommitService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T22:24:42.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GitHubCommitContext.cs",
+              "DocumentMoniker": "C:\\Users\\mikub\\source\\repos\\GitHubCommits\\GitHubCommits\\GitHubCommitContext.cs",
+              "RelativeDocumentMoniker": "GitHubCommits\\GitHubCommitContext.cs",
+              "ToolTip": "C:\\Users\\mikub\\source\\repos\\GitHubCommits\\GitHubCommits\\GitHubCommitContext.cs",
+              "RelativeToolTip": "GitHubCommits\\GitHubCommitContext.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwCAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T22:26:08.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GitHubCommits",
+              "DocumentMoniker": "C:\\Users\\mikub\\source\\repos\\GitHubCommits\\GitHubCommits\\GitHubCommits.csproj",
+              "RelativeDocumentMoniker": "GitHubCommits\\GitHubCommits.csproj",
+              "ToolTip": "C:\\Users\\mikub\\source\\repos\\GitHubCommits\\GitHubCommits\\GitHubCommits.csproj",
+              "RelativeToolTip": "GitHubCommits\\GitHubCommits.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-07T22:21:40.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mikub\\source\\repos\\GitHubCommits\\GitHubCommits\\Program.cs",
+              "RelativeDocumentMoniker": "GitHubCommits\\Program.cs",
+              "ToolTip": "C:\\Users\\mikub\\source\\repos\\GitHubCommits\\GitHubCommits\\Program.cs*",
+              "RelativeToolTip": "GitHubCommits\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T22:17:49.593Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
