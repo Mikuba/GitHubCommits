@@ -1,6 +1,7 @@
 ﻿using System.Net.Http.Json;
 using System.Reflection.Metadata;
 using System.Text.Json;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace GitHubCommits
@@ -10,13 +11,15 @@ namespace GitHubCommits
         private IHttpClientFactory _httpClientFactory;
         private ILogger _logger;
         private GitHubCommitsContext _context;
+        private string _gitHubApi;
        
        
-        public GitHubCommitService(IHttpClientFactory httpClientFactory, ILogger<GitHubCommit> logger,GitHubCommitsContext context)
+        public GitHubCommitService(IHttpClientFactory httpClientFactory, ILogger<GitHubCommit> logger,GitHubCommitsContext context, IConfiguration config)
         {
             _httpClientFactory = httpClientFactory;
             _logger = logger;
             _context = context;
+            _gitHubApi = config.GetSection("GitHubApi").Value;
         }
 
         public async Task ExecuteAsync(string userName, string repositoryName)
@@ -41,7 +44,6 @@ namespace GitHubCommits
                 string committer, message;
                 HandleNullValues(commit, out committer, out message);
                 _logger.LogWarning($@"[{repositoryName}]/[{commit.sha}]: {message} [{committer}]");
-
             }
             _logger.LogInformation("Those will be saved in database, unless they already exist");
         }
@@ -95,10 +97,12 @@ namespace GitHubCommits
             try
             {
                 using var client = _httpClientFactory.CreateClient();
+                client.BaseAddress = new Uri(_gitHubApi);
+
                 client.DefaultRequestHeaders.Add("User-Agent", "request");
 
                 return await client.GetFromJsonAsync<GitHubCommit.Root[]>(
-                $"https://api.github.com/repos/{userName}/{repositoryName}/commits",
+                $"{userName}/{repositoryName}/commits",
                 new JsonSerializerOptions(JsonSerializerDefaults.Web));
 
             }
@@ -113,14 +117,14 @@ namespace GitHubCommits
                     _logger.LogWarning($"The repository {repositoryName} for user {userName} does not exists");
                                       
                 }
-             
-                throw hre;
+
+                throw;
             }
 
             catch (Exception e)
             {
                 _logger.LogWarning(e.Message);
-                throw e;
+                throw;
             }
         }
     }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GitHubCommits")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1ef3ac13b86bd77dab2ea98de24a6a88b8e07b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e54190c2f286dcdec66aaf499b13e0c8153eaef")]
 [assembly: System.Reflection.AssemblyProductAttribute("GitHubCommits")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GitHubCommits")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

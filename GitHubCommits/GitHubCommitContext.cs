@@ -22,13 +22,13 @@ public class Commit
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int ID { get; private set; }
 
-    public string UserName { get; set; }
+    public required string UserName { get; set; }
 
-    public string RepoName { get; set; }
+    public required string RepoName { get; set; }
 
-    public string Sha { get; set; }
+    public required string Sha { get; set; }
 
-    public string Message { get; set; }
+    public required string Message { get; set; }
 
     public string Committer { get; set; }
 
