@@ -4,17 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class GitHubCommitsContext : DbContext
+public class GitHubCommitsContext(DbContextOptions<GitHubCommitsContext> options) : DbContext(options)
 {
     public DbSet<Commit> GitHubCommit { get; set; }
     
     public string DbPath { get; }
-
-    public GitHubCommitsContext(DbContextOptions<GitHubCommitsContext> options) :base (options)
-    {     
-    }
-    
-   
 }
 
 public class Commit
@@ -30,6 +24,6 @@ public class Commit
 
     public required string Message { get; set; }
 
-    public string Committer { get; set; }
+    public required string Committer { get; set; }
 
 }

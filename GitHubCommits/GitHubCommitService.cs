@@ -20,18 +20,19 @@ namespace GitHubCommits
             _logger = logger;
             _context = context;
             _gitHubApi = config.GetSection("GitHubApi").Value;
+
         }
 
         public async Task ExecuteAsync(string userName, string repositoryName)
         {
             var commits =  await RetrieveCommits(userName, repositoryName);
 
-            PrintCommits(commits, userName, repositoryName);
-
             if (commits != null)
             {
                 await DbSave(userName, repositoryName, commits);
             }
+
+            PrintCommits(commits, userName, repositoryName);
         }
 
         private void PrintCommits(GitHubCommit.Root[]? commits, string userName, string repositoryName)
@@ -81,6 +82,7 @@ namespace GitHubCommits
             {
                 //It is a need to have all commits, so if one fails it is rolled back
                 transaction.Rollback();
+                throw;
             }
 
         }

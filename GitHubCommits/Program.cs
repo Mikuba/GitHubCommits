@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 
 builder.Logging.ClearProviders();
-builder.Logging.AddConsole(o=>o.Format = Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat.Systemd);
+builder.Logging.AddSystemdConsole();
 builder.Services.AddHttpClient()
 .AddDbContext<GitHubCommitsContext>(options => options.UseSqlite($"Data Source={SetDbPath()}"))
 .AddTransient<GitHubCommitService>();
