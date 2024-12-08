@@ -42,7 +42,7 @@ else
     Console.WriteLine("========================================================");
     Console.WriteLine($"The commits for repositorium {args[1]} for use {args[0]} have been uploaded to SQLite data base located at {SetDbPath()}");
     Console.WriteLine("========================================================");
-    Console.ReadKey();
+
 }
 
 
