@@ -49,6 +49,8 @@ namespace GitHubCommits
             _logger.LogInformation("Those will be saved in database, unless they already exist");
         }
 
+        //PLEASE NOTE THAT IN ENTERPRISE ENVIRONMENT THE DB CALLS WOULD BE HANDLED BY DEDICATED API
+        //THE SCOPE OF THIS EXERCISE IS HOWEVER TO HAVE CONSOLE APP SAVING IT
         private async Task DbSave(string userName, string RepositoryName, GitHubCommit.Root[]? commits)
         {
             _context.Database.EnsureCreated();
